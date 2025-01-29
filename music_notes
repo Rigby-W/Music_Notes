@@ -1,16 +1,3 @@
-from machine import Pin, PWM
-import time
-buzzer = PWM(Pin(0))
-def buzzer_on(freq):
-    buzzer.freq(freq)
-    buzzer.duty_u16(32768)
-def buzzer_off():
-    buzzer.duty_u16(0)
-def buzz(freq, buzz_time):
-    buzzer_on(freq)
-    time.sleep(buzz_time)
-    buzzer_off()
-
 class note:
     c0=16
     c1=33
